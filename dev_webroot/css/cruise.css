@@ -54,6 +54,10 @@
     font-size: 16px;
 }
 
+.f18 {
+    font-size: 18px;
+}
+
 .fsn {
     font-style: normal;
 }
@@ -69,6 +73,10 @@
 
 .white-panel {
     background: #fff;
+    padding: 30px;
+}
+
+.p-md {
     padding: 20px;
 }
 
@@ -282,6 +290,90 @@ fieldset[disabled] .btn-danger.active {
 .table.middle > tbody > tr > td,
 .table.middle > tfoot > tr > td {
     vertical-align: middle;
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    padding: 10px;
+}
+
+.table-basic {
+    border: 1px solid #ddd;
+}
+
+.table.table-basic>thead>tr.active>th {
+    border: 0;
+    font-weight: normal;
+    color: #666;
+}
+
+
+/*加减*/
+
+.spinner {
+    height: 28px;
+    width: 96px;
+    overflow: hidden;
+    vertical-align: top;
+    display: inline-block;
+    *zoom: 1;
+}
+
+.spinner button,
+.spinner .value {
+    text-align: center;
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 26px;
+    margin: 0;
+    background: #fff;
+}
+
+.spinner button {
+    border: 1px solid #d9d9d9;
+    width: 28px;
+    color: #666;
+    padding: 0;
+    outline: none;
+    background: #f7f7f7;
+}
+
+.spinner .decrease {
+    cursor: pointer;
+}
+
+.spinner .decrease[disabled] {
+    cursor: default;
+    color: #999;
+}
+
+.spinner .increase {
+    cursor: pointer;
+}
+
+.spinner .value {
+    width: 40px;
+    height: 26px;
+    border: 1px solid #d9d9d9;
+    border-width: 1px 0;
+    font-family: Arial;
+    color: #666;
+    padding: 0px;
+    outline: none
+}
+
+.spinner .value.passive {
+    color: #919191
+}
+
+.spinner .error,
+.spinner .invalid {
+    background: #aa0000
 }
 
 
@@ -535,6 +627,19 @@ fieldset[disabled] .btn-danger.active {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
+
+.booking-info .col-l {
+    width: 360px;
+    float: left;
+}
+
+.booking-info .col-r {
+    width: 715px;
+    padding-left: 30px;
+    border-left: 1px solid #ddd;
+    float: right;
+}
+
 
 
 /*动画*/
