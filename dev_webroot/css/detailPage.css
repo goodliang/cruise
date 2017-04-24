@@ -42,6 +42,11 @@ a {
 	float: right;
 	width: 650px;
 }
+.main-right>h5 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0;
+}
 .m-b10 {
 	margin-bottom: 10px;
 }
@@ -101,7 +106,7 @@ a.orange_bg:hover {
 	border: 0 none;
 	height: 45px;
 	width: 145px;
-	font-size: 17px;
+	font-size: 16px;
 	color: #fff;
 	cursor: pointer;
 	background-color: #E41D41;
@@ -152,6 +157,9 @@ a.orange_bg:hover {
 	overflow: hidden;
 	margin-top: 20px;
 }
+.detail>h4 {
+	font-size: 17px;
+}
 .detail>ul>li {
 	display: inline-block;
 }
@@ -176,9 +184,13 @@ a.orange_bg:hover {
 }
 .detail ul.det_list li {
 	position: relative;
+	margin:0 5px;
+}
+.detail ul.det_list li:last-child,.detail ul.det_list li:first-child {
+	margin: 0;	
 }
 .product {
-	width: 275px;
+	width: 265px;
 	position: absolute;
 	margin-top: -20px ;
 	text-align: left;
@@ -203,10 +215,13 @@ a.orange_bg:hover {
 }
 .sch_table{
 	width: 100%;
-	font-size: 16px;
+	font-size: 14px;
 }
 .sch_table td {
-	padding: 15px ;
+	padding:15px 0;
+}
+.sch_table td:nth-child(2) {
+	padding-left: 15px ;
 }
 .sch_table tr:nth-child(odd),.sch_table tr:nth-child(even) td:first-child{
 	background-color: #FFEEF1;

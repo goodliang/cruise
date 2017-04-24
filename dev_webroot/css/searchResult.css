@@ -47,6 +47,9 @@ a {
 	float: left;
 	font-weight: normal;
 }
+.secitem dt>img,.place_info img {
+	vertical-align: top;
+}
 .secitem dd a{
 	display: inline-block;
 	padding: 2px 5px;
@@ -80,17 +83,21 @@ img{
 	border: 0;
 }
 .place_info{
-	width: 360px;
+	/*width: 360px;*/
 	float: left;
 	padding: 0 0 0 20px;
 }
+.place_title {
+	font-size: 16px;
+	font-weight: bold;
+}
 .place_add{
 	margin:0;
-	font-size: 12px;
+	font-size: 13px;
 }
 .place_prop{
-	font-size: 12px;
-	padding-top: 5px;
+	font-size: 13px;
+	margin-top: 20px;
 	margin-bottom: 0;
 }
 .place_right{
@@ -101,7 +108,7 @@ img{
 	margin-top: -10px;
 }
 .place_right>b{
-	font-size: 24px;
+	font-size: 20px;
 }
 .place_prop>li{
 	margin-bottom: 5px;
@@ -111,7 +118,7 @@ li.place_list:hover{
 	cursor: pointer;
 }
 .footer_list{
-	font-size: 18px;
+	font-size: 12px;
 	margin-top: 30px;
 	margin-bottom: 20px;
 	text-align: center;
@@ -121,7 +128,7 @@ li.place_list:hover{
 }
 .footer_list>ul a{
 	display: inline-block;
-	padding: 5px 18px;
+	padding: 12px 16px;
 	border: 1px solid #E7E7E7;
 	border-radius: 5px;
 	margin:0 5px;
@@ -129,5 +136,5 @@ li.place_list:hover{
 .footer_list>ul a.active,.footer_list>ul a:hover{
 	background-color: #e41d41;
 	border: 1px solid #e41d41;
-	padding: 5px 18px;
+	padding: 12px 16px;
 }
