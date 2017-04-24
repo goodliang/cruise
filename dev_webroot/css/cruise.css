@@ -18,6 +18,7 @@
 
 .w600 {
     width: 600px;
+    margin: 0 auto;
 }
 
 .w1200 {
@@ -25,8 +26,12 @@
     margin: 0 auto;
 }
 
-body {
+.bg-white {
     background: #fff;
+}
+
+.text-primary {
+    color: #444;
 }
 
 .text-blue {
@@ -35,6 +40,10 @@ body {
 
 .text-red {
     color: #e41d41;
+}
+
+.text-orange {
+    color: #ff4400;
 }
 
 .w5em {
@@ -47,6 +56,32 @@ body {
 
 .fsn {
     font-style: normal;
+}
+
+.fwb {
+    font-weight: bold;
+}
+
+.breadcrumb {
+    display: block;
+    background: none;
+}
+
+.white-panel {
+    background: #fff;
+    padding: 20px;
+}
+
+.m-t-md {
+    margin-top: 20px;
+}
+
+.m-b-sm {
+    margin-bottom: 10px;
+}
+
+.m-b-none {
+    margin-bottom: 0;
 }
 
 
@@ -181,6 +216,72 @@ fieldset[disabled] .btn-danger:active,
 fieldset[disabled] .btn-danger.active {
     background-color: #f33b5c;
     border-color: #f33b5c;
+}
+
+.media,
+.media-body {
+    zoom: 1;
+    overflow: hidden;
+}
+
+.media-body {
+    width: 10000px;
+}
+
+.media-object {
+    display: block;
+}
+
+.media-object.img-thumbnail {
+    max-width: none;
+}
+
+.media-right,
+.media > .pull-right {
+    padding-left: 10px;
+}
+
+.media-left,
+.media > .pull-left {
+    padding-right: 10px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.media-middle {
+    vertical-align: middle;
+}
+
+.media-bottom {
+    vertical-align: bottom;
+}
+
+.media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.media-nowrap {
+    white-space: nowrap;
+}
+
+.media-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.table.middle > thead > tr > th,
+.table.middle > tbody > tr > th,
+.table.middle > tfoot > tr > th,
+.table.middle > thead > tr > td,
+.table.middle > tbody > tr > td,
+.table.middle > tfoot > tr > td {
+    vertical-align: middle;
 }
 
 
@@ -413,6 +514,26 @@ fieldset[disabled] .btn-danger.active {
 
 .recommend .big-cover .recommen-body .title {
     font-size: 16px;
+}
+
+
+/*定制*/
+
+.customized {
+    background: #fff;
+    margin: 50px auto 50px;
+}
+
+.customized-form {
+    padding: 30px 0 10px;
+}
+
+
+/*预订*/
+
+.booking .breadcrumb {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 
