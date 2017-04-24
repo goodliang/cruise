@@ -12,13 +12,17 @@
     outline: none !important;
 }
 
+.w100 {
+    width: 100px;
+}
+
+.w600 {
+    width: 600px;
+}
+
 .w1200 {
     width: 1200px;
     margin: 0 auto;
-}
-
-.w100 {
-    width: 100px;
 }
 
 body {
