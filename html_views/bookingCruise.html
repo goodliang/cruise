@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="main w1200 clearfix booking">
+    <div class="main w1200 clearfix booking" id="cart">
         <ol class="breadcrumb">
             <li> <a href="#">游轮</a> </li>
             <li> <a href="#">游轮推荐</a> </li>
@@ -256,6 +256,7 @@
         </form>
     </div>
     <script src="http://links.eventown.com.cn/vendor/jquery/jquery-1.12.0.min.js"></script>
+    <script src="js/vue.js"></script>
     <script src="http://www.eventown.com/js/vendor/jquery-spinner/jquery.spinner.js"></script>
     <script>
     $(document).ready(function() {
@@ -265,6 +266,27 @@
                 value: _inp
             });
         })
+    })
+    var vm = new Vue({
+        el: '#cart',
+        data: {
+            pro_id: '122',
+            pro_site: {
+                site_img: '',
+                site_name: '',
+                site_price: '',
+                site_state: ''
+            },
+            pro_service: {
+                site_name: '',
+                site_price: '',
+                site_state: ''
+            },
+            pro_zoom: {
+                zoom_type:'',
+                zoom_pro:'',
+            }
+        }
     })
     </script>
 </body>
