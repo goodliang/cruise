@@ -222,6 +222,9 @@
             </a>
         </div>
     </div>
+    <div class="load-box">
+        <div class="load-body"><img src="img/load02.png" alt=""></div>
+    </div>
     <script src="http://links.eventown.com.cn/vendor/jquery/jquery-1.12.0.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/dropdown.min.js"></script>
     <script src="js/bootstrap-select/bootstrap-select.js"></script>
@@ -230,6 +233,15 @@
         style: 'btn-light',
         size: 4
     });
+
+    function hot() {
+        $.get('/hot', function(data) {
+            if (data.errorno == 0) {
+                console.log(data.data);
+            }
+        })
+    }
+    hot()
     </script>
 </body>
 

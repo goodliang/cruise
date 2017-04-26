@@ -641,6 +641,36 @@ fieldset[disabled] .btn-danger.active {
 }
 
 
+/*loding*/
+
+.load-box {
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.load-box .load-body {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto;
+    background: url(../img/load01.png) center no-repeat;
+}
+
+.load-box .load-body img {
+    -webkit-animation: rotate .50s infinite linear;
+}
+
+.load-box.middle {
+    padding: 0;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -36px;
+    margin-left: -36px;
+}
+
 
 /*动画*/
 
