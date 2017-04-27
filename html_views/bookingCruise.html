@@ -23,7 +23,7 @@
             <li> <a href="#">游轮介绍</a> </li>
             <li class="active"> <strong>预订</strong> </li>
         </ol>
-        <form class="form-horizontal">
+        <form class="form-horizontal" id="packageForm">
             <h4>选择游轮场地租赁</h4>
             <div class="white-panel clearfix">
                 <table class="table table-bordered middle m-b-none text-primary">
@@ -176,40 +176,40 @@
                         <div class="form-group">
                             <div class="input-area">
                                 <div class="input-area-left middle">
-                                    <label for="" class="w5em"><em class="text-red">*</em> 联系人：</label>
+                                    <label for="name" class="w5em"><em class="text-red">*</em> 联系人：</label>
                                 </div>
                                 <div class="input-area-body">
-                                    <input type="text" class="form-control">
+                                    <input name="name" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-area">
                                 <div class="input-area-left middle">
-                                    <label for="" class="w5em"><em class="text-red">*</em> 人数：</label>
+                                    <label for="people" class="w5em"><em class="text-red">*</em> 人数：</label>
                                 </div>
                                 <div class="input-area-body">
-                                    <input type="text" class="form-control">
+                                    <input name="people" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-area">
                                 <div class="input-area-left middle">
-                                    <label for="" class="w5em"><em class="text-red">*</em> 手机号：</label>
+                                    <label for="mobile" class="w5em"><em class="text-red">*</em> 手机号：</label>
                                 </div>
                                 <div class="input-area-body">
-                                    <input type="text" class="form-control">
+                                    <input name="mobile" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-area">
                                 <div class="input-area-left middle">
-                                    <label for="" class="w5em">备注：</label>
+                                    <label for="remarks" class="w5em">备注：</label>
                                 </div>
                                 <div class="input-area-body">
-                                    <input type="text" class="form-control">
+                                    <input name="remarks" type="text" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -256,7 +256,7 @@
         </form>
     </div>
     <script src="http://links.eventown.com.cn/vendor/jquery/jquery-1.12.0.min.js"></script>
-    <script src="js/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <script src="http://www.eventown.com/js/vendor/jquery-spinner/jquery.spinner.js"></script>
     <script>
     $(document).ready(function() {
@@ -266,27 +266,59 @@
                 value: _inp
             });
         })
-    })
-    var vm = new Vue({
-        el: '#cart',
-        data: {
-            pro_id: '122',
-            pro_site: {
-                site_img: '',
-                site_name: '',
-                site_price: '',
-                site_state: ''
+    });
+    // 验证
+    jQuery.validator.addMethod("phoneMobile", function(value, element) {
+        var mobileRule = /^(1[3-9])\d{9}$/;
+        return mobileRule.test(value);
+    }, "请填写正确手机号");
+
+    $.validator.setDefaults({
+        highlight: function(a) {
+            $(a).closest(".form-group").removeClass("has-success").addClass("has-error")
+        },
+        success: function(a) {
+            a.closest(".form-group").removeClass("has-error").addClass("has-success")
+        },
+        errorElement: "span",
+        submitHandler: function(form) {
+            form.submit();
+        },
+        errorClass: "help-block m-b-none",
+        validClass: "help-block m-b-none"
+    });
+    $('#packageForm').validate({
+        debug: true,
+        rules: {
+            name: {
+                required: true,
+                minlength: 4
             },
-            pro_service: {
-                site_name: '',
-                site_price: '',
-                site_state: ''
+            people: {
+                required: true,
+                number: true,
+                digits: true,
+                min: 1
             },
-            pro_zoom: {
-                zoom_type:'',
-                zoom_price:'',
-                zoom_people:'',
-                zoom_nume:'',
+            mobile: {
+                required: true,
+                phoneMobile: true
+            }
+        },
+        messages: {
+            name: {
+                required: "请输入您的姓名",
+                minlength: "姓名必需由两个字母组成"
+            },
+            people: {
+                required: "请输入人数",
+                number:"请输入数字",
+                digits:"请输入整数",
+                min:"人数不能小于1人"
+            },
+            mobile: {
+                required: "请输入手机号",
+                phoneMobile: "请填写正确手机号"
             }
         }
     })
