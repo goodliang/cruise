@@ -312,7 +312,7 @@ fieldset[disabled] .btn-danger.active {
 }
 
 
-/*加减*/
+/*spinner*/
 
 .spinner {
     height: 28px;
@@ -377,7 +377,7 @@ fieldset[disabled] .btn-danger.active {
 }
 
 
-/*首页*/
+/*home*/
 
 .cruise-describe {
     overflow: hidden;
@@ -436,6 +436,11 @@ fieldset[disabled] .btn-danger.active {
     width: 51px;
     height: 55px;
     background: url(../img/shu.png);
+}
+
+.search-sidebar .radio-inline+.radio-inline,
+.search-sidebar .checkbox-inline+.checkbox-inline {
+    margin-left: 5px;
 }
 
 .cruise-banner-body {
@@ -554,12 +559,14 @@ fieldset[disabled] .btn-danger.active {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    // background: rgba(0, 0, 0, 0.5);
     margin: 0;
     font-weight: normal;
-    padding: 5px 0;
+    padding: 10px 0;
     width: 100%;
     font-size: 14px;
+    background-image: -webkit-linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .preferential .cover-item .title span {
@@ -609,7 +616,7 @@ fieldset[disabled] .btn-danger.active {
 }
 
 
-/*定制*/
+/*customized*/
 
 .customized {
     background: #fff;
@@ -621,7 +628,7 @@ fieldset[disabled] .btn-danger.active {
 }
 
 
-/*预订*/
+/*booking*/
 
 .booking .breadcrumb {
     padding: 10px 0;
@@ -671,8 +678,106 @@ fieldset[disabled] .btn-danger.active {
     margin-left: -36px;
 }
 
+.count_down {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    font-family: "微软雅黑";
+    font-weight: bold;
+}
 
-/*动画*/
+.count_down .colon {
+    display: inline-block;
+    padding: 0 4px;
+    font-weight: normal;
+    color: #000;
+}
+
+.count_down .box {
+    display: inline-block;
+    width: 2em;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.faderBody {
+    position: relative;
+    overflow: hidden;
+}
+
+.faderBody .slide {
+    position: absolute;
+    width: 790px;
+    height: 340px;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.faderBody .prev,
+.faderBody .next {
+    position: absolute;
+    height: 80px;
+    line-height: 80px;
+    width: 50px;
+    font-size: 60px;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    left: 0;
+    z-index: 4;
+    margin-top: -40px;
+    cursor: pointer;
+    opacity: .7;
+    transition: all 150ms;
+}
+
+.faderBody .prev:hover,
+.faderBody .next:hover {
+    opacity: 1;
+}
+
+.faderBody .next {
+    left: auto;
+    right: 0;
+}
+
+.faderBody .pager_list {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    bottom: 0;
+    text-align: center;
+    z-index: 4;
+}
+
+.faderBody .pager_list li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 0 7px;
+    background: #fff;
+    opacity: .7;
+    text-indent: -9999px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 150ms;
+}
+
+.faderBody .pager_list li:hover,
+.faderBody .pager_list li.active {
+    opacity: 1;
+    background: none;
+    border: 2px solid #e41d41;
+}
 
 @keyframes rotate {
     0% {

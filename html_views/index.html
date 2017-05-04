@@ -38,15 +38,21 @@
                                     </label>
                                 </div>
                                 <div class="radio radio-info radio-inline">
-                                    <input type="radio" id="destination2" value="rb" name="destination">
+                                    <input type="radio" id="destination2" value="flb" name="destination">
+                                    <label for="destination3">
+                                        菲律宾
+                                    </label>
+                                </div>
+                                <div class="radio radio-info radio-inline">
+                                    <input type="radio" id="destination3" value="rb" name="destination">
                                     <label for="destination2">
                                         日本
                                     </label>
                                 </div>
                                 <div class="radio radio-info radio-inline">
-                                    <input type="radio" id="destination3" value="flb" name="destination">
+                                    <input type="radio" id="destination4" value="flb" name="destination">
                                     <label for="destination3">
-                                        菲律宾
+                                        公海
                                     </label>
                                 </div>
                             </div>
@@ -121,8 +127,15 @@
                 </form>
                 <div class="shu"></div>
             </div>
-            <div class="cruise-banner-body">
-                <img src="img/banner.png">
+            <div id="homeSlide" class="faderBody cruise-banner-body">
+                <a href="#"><img class="slide" src="img/img1.jpg"></a>
+                <a href="#"><img class="slide" src="img/img2.jpg"></a>
+                <a href="#"><img class="slide" src="img/img3.jpg"></a>
+                <div class="fader_controls">
+                    <div class="page prev" data-target="prev">&lsaquo;</div>
+                    <div class="page next" data-target="next">&rsaquo;</div>
+                    <ul class="pager_list"></ul>
+                </div>
             </div>
         </div>
         <div class="cruise-title clearfix">
@@ -134,21 +147,25 @@
                 <img src="http://img.eventown.cn/meeting/2015/08/14/4908b3ea0b87ae1a.jpg!nw380h228" class="cover-pic">
                 <span class="price">￥1197/<small>人</small></span>
                 <p class="title"><span>北京雁栖湖国际会展中心</span></p>
+                <p class="count_down"><span class="day_num box"></span><span class="colon">:</span><span class="hour_num box"></span><span class="colon">:</span><span class="min_num box"></span><span class="colon">:</span><span class="sec_num box"></span></p>
             </a>
             <a href="#" class="cover-item border-none">
                 <img src="http://img.eventown.cn/meeting/2015/08/14/4908b3ea0b87ae1a.jpg!nw380h228" class="cover-pic">
                 <span class="price">￥1197/<small>人</small></span>
                 <p class="title"><span>北京雁栖湖国际会展中心</span></p>
+                <p class="count_down"><span class="day_num box"></span><span class="colon">:</span><span class="hour_num box"></span><span class="colon">:</span><span class="min_num box"></span><span class="colon">:</span><span class="sec_num box"></span></p>
             </a>
             <a href="#" class="cover-item border-none">
                 <img src="http://img.eventown.cn/meeting/2015/08/14/4908b3ea0b87ae1a.jpg!nw380h228" class="cover-pic">
                 <span class="price">￥1197/<small>人</small></span>
                 <p class="title"><span>北京雁栖湖国际会展中心</span></p>
+                <p class="count_down"><span class="day_num box"></span><span class="colon">:</span><span class="hour_num box"></span><span class="colon">:</span><span class="min_num box"></span><span class="colon">:</span><span class="sec_num box"></span></p>
             </a>
             <a href="#" class="cover-item border-none">
                 <img src="http://img.eventown.cn/meeting/2015/08/14/4908b3ea0b87ae1a.jpg!nw380h228" class="cover-pic">
                 <span class="price">￥1197/<small>人</small></span>
                 <p class="title"><span>北京雁栖湖国际会展中心</span></p>
+                <p class="count_down"><span class="day_num box"></span><span class="colon">:</span><span class="hour_num box"></span><span class="colon">:</span><span class="min_num box"></span><span class="colon">:</span><span class="sec_num box"></span></p>
             </a>
         </div>
         <div class="cruise-title clearfix">
@@ -228,20 +245,23 @@
     <script src="http://links.eventown.com.cn/vendor/jquery/jquery-1.12.0.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/dropdown.min.js"></script>
     <script src="js/bootstrap-select/bootstrap-select.js"></script>
+    <script src="js/countDown.js"></script>
+    <script src="js/easyfader.js"></script>
     <script type="text/javascript">
     $('.selectpicker').selectpicker({
         style: 'btn-light',
         size: 4
     });
 
-    function hot() {
-        $.get('/hot', function(data) {
-            if (data.errorno == 0) {
-                console.log(data.data);
-            }
-        })
-    }
-    hot()
+    $(".count_down").countDown({
+        //startTimeStr: '', //开始时间
+        endTimeStr: '2017/05/5 23:59:59', //结束时间
+        daySelector: ".day_num",
+        hourSelector: ".hour_num",
+        minSelector: ".min_num",
+        secSelector: ".sec_num"
+    });
+    $('#homeSlide').easyFader();
     </script>
 </body>
 
